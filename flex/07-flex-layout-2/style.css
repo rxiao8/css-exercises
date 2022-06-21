@@ -27,42 +27,64 @@ body {
   border-radius: 4px;
 }
 
-/*My attempt*/
-body{
+/*My attempt (revised)*/
+body {
   display: flex;
   flex-direction: column;
 }
 
-.sidebar{
+/*Turned this into flex to center the text vertically on the left side of the main axis*/
+.header {
   display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/*flex 1 allows the the content to push the footer to the bottom*/
+.container {
   flex: 1;
+  display: flex;
+}
+
+/*flex-shrink prevents the sidebar from shrinking or being affected by the resizing of the window*/
+.sidebar {
+  flex-shrink: 0;
+  padding: 16px;
+}
+
+/*list style has no bullet points*/
+ul {
+  list-style-type: none;
   margin: 0;
-  width: 300px;
-
+  padding: 0;
 }
 
-a{
-  /* this removes the line under our links */
+li {
+  margin-bottom: 16px;
+}
+
+a {
+  color: white;
   text-decoration: none;
-  color: rebeccapurple;
-}
-.container{
-  display: flex;
-  flex: 1;
-
+  font-size: 24px;
 }
 
-
-
-.card-container{
+.card-container {
+  padding: 32px;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
-  gap: 10px;
 }
 
-.card{
-  padding: 20px;
-  width: 250px;
-  height: 300px;
+.card {
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
